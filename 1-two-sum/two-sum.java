@@ -7,9 +7,11 @@ class Solution {
                if((nums[i] + nums[j]) == target){
                    ansArr[0] = i;
                    ansArr[1] = j;
+                   return ansArr;
                }
            }
        }
-       return ansArr;
+       int ansArr1[] = {};
+       return ansArr1;
     }
 }
