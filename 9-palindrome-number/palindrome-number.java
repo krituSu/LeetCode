@@ -8,11 +8,11 @@ class Solution {
         while(x > 0){
             int digit = x % 10;
             revNum = revNum * 10 + digit;
-            x = x / 10;
+            x /= 10;
         }
         if(a == revNum){
             return true;
         }
-            return false;
+        return false;
     }
 }
