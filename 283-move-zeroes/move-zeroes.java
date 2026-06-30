@@ -17,8 +17,6 @@ class Solution {
                 j++;
             }
         }
-        for(int k : nums){
-            System.out.print(k);
-        }
+       
     }
 }
