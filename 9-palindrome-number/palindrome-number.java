@@ -10,8 +10,6 @@ class Solution {
         if(a == revNum){
             return true;
         }
-        else{
             return false;
-        }
     }
 }
