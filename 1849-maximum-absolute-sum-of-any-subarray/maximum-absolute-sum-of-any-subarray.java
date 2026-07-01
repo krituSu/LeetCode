@@ -17,5 +17,10 @@ class Solution {
         }
     return maxi;
     }
-   
+    //MAine Max subArray nikalte gya and Min SubArray nikalte gye 
+    //Aur saath hi saath mein dono ki value ko add krke fir absolute banake
+    //maxi se compare karake maxi mein store krte gya 
+    //Fuckkkkkkkkkkkk!!!!!!!!!!!!!!!
+    //Don't know how this even worked 
+    //Even Dry Run is not able to make me explain 😭😭😭
 }
