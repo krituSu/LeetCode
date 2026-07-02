@@ -21,11 +21,14 @@ class Solution {
                 j = 0;
                 i++;
             }
-            if(i < m || k < r){
-               reshape[k][l] = mat[i][j]; 
-               j++;
-               l++;
+
+            if(i > m - 1 && k > r - 1){
+                break;
             }
+            reshape[k][l] = mat[i][j]; 
+            j++;
+            l++;
+           
         }
 
         return reshape;
