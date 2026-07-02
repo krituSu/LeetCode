@@ -10,14 +10,21 @@ class Solution {
 
         int i = 0;
         int j = 0;
-        for(int k = 0; k < r; k++){
-            for(int l = 0; l < c; l++){
-                if(j > (n - 1)){
-                    j = 0;
-                    i++;
-                }
-                reshape[k][l] = mat[i][j]; 
-                j++;
+        int k = 0; // k rows
+        int l = 0; // l colums
+        while(k < r){
+            if(l > c - 1){
+                l = 0;
+                k++;
+            }
+            if(j > n - 1){
+                j = 0;
+                i++;
+            }
+            if(i < m || k < r){
+               reshape[k][l] = mat[i][j]; 
+               j++;
+               l++;
             }
         }
 
