@@ -13,6 +13,7 @@ class Solution {
                 tri[index] = grid[row][col];
             }
         }
+        k = k % size;
         int[] shifted = new int[size];
         for(int i = 0; i < size; i++){
             int newIndex = (i + k) % size;
