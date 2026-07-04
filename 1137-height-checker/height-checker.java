@@ -6,27 +6,26 @@ class Solution {
         for(int k = 0; k < n; k++){
             expected[k] = heights[k];
         }
-        for(int i = 1 ; i < n; i++){
-            int prev = i - 1;
-            int curr = i;
-            int currValue = expected[i];
-            while(currValue < expected[prev] && prev >= 0){
-                expected[prev + 1] = expected[prev];
-                prev--;
-                if(prev < 0){
-                    break;
+        int count = 0;
+        for(int i = 0; i < n; i++){
+            int minIndex = i;
+            if( i < n - 1){
+            for(int j = i + 1; j < n; j++){
+                if(expected[minIndex] >= expected[j]){
+                    minIndex = j;
                 }
             }
-            expected[prev + 1] = currValue;
-        }
+            
+            int temp = expected[i];
+            expected[i] = expected[minIndex];
+            expected[minIndex] = temp;
+            }
 
-        int j = 0;
-        for(int i = 0; i < n; i++){
             if(heights[i] != expected[i]){
-                j++;
+                count++;
             }
         }
-
-        return j;
+        
+        return count;
     }
 }
