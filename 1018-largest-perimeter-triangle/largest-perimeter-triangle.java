@@ -17,9 +17,9 @@ class Solution {
         }
         //Getting the perimeter
         int maxPerimeter = Integer.MIN_VALUE;
+        int perimeter = 0;
         for(int i = 0; i < n - 2; i++){
             int val = nums[i] + nums[i + 1];
-            int perimeter = 0;
             for(int j = i + 2; j < n; j++){
                 if(val > nums[j]){
                     perimeter = val + nums[j];
