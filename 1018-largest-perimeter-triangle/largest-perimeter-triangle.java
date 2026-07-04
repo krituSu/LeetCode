@@ -23,10 +23,11 @@ class Solution {
             for(int j = i + 2; j < n; j++){
                 if(val > nums[j]){
                     perimeter = val + nums[j];
-                    if(perimeter > maxPerimeter){
-                        maxPerimeter = perimeter;
-                    }
                 }
+                if(perimeter > maxPerimeter){
+                    maxPerimeter = perimeter;
+                }
+                
             }
         }
         if(maxPerimeter > 0){
