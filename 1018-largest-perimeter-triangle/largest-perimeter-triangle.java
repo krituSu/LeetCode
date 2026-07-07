@@ -10,16 +10,16 @@ class Solution {
         while(j < n){
             int val = nums[i] + nums[i + 1];
             if(val > nums[j]){
-                perimeter = val + nums[j];
-            }
-            if(perimeter > maxPerimeter){
-                maxPerimeter = perimeter;
-            }            
-            if(j == n - 1 && maxPerimeter < 0){
-                return 0;
-            }
+                perimeter = val + nums[j];            
+                if(perimeter > maxPerimeter){
+                     maxPerimeter = perimeter;
+                } 
+            }           
             i++;
             j++;
+        }
+        if(maxPerimeter < 0){
+            return 0;
         }
         return maxPerimeter;
     }
